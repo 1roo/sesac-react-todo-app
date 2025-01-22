@@ -1,0 +1,86 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-left: 15px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 0 auto;
+}
+
+section {
+  border: 1px solid rgba(128, 128, 0, 0.443);
+  border-radius: 10px;
+  width: 100%;
+  margin: 5px;
+}
+
+.css-style input {
+  width: 88%;
+  height: 50px;
+  margin: 0 auto;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: 1px solid gray;
+}
+
+.css-style button {
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.css-style ul {
+  padding: 0;
+
+  li {
+    height: 50px;
+    line-height: 50px;
+    list-style: none;
+
+    span {
+      cursor: pointer;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+
+    span:hover + button {
+      color: olive;
+    }
+  }
+}
+
+li:nth-child(2n) {
+  background-color: rgba(128, 128, 0, 0.187);
+}
+li:nth-child(2n-1) {
+  background-color: rgba(128, 128, 0, 0.062);
+}
+
+button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.done-style {
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    padding-left: 25px;
+    height: 50px;
+    line-height: 50px;
+  }
+}

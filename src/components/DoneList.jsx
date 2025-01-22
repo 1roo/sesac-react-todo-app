@@ -1,16 +1,25 @@
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useSelector } from "react-redux";
 
 export default function DoneList() {
-  let doneList = useSelector((state) => state.todo.list);
-  doneList = doneList.filter((todo) => todo.done !== false);
+  let doneList = useSelector((state) => state.todo.list).filter(
+    (el) => el.done !== false
+  );
   return (
-    <section>
+    <section className="done-style">
       <h3>완료 목록</h3>
       <ul>
-        {doneList.map((todo) => {
+        {doneList.map((el) => {
           return (
-            <li key={todo.id}>
-              <span>{todo.text}</span>
+            <li key={el.id}>
+              <span>
+                <FontAwesomeIcon
+                  icon={faCheck}
+                  style={{ width: "15px", height: "15px", marginRight: "20px" }}
+                />
+                {el.text}
+              </span>
             </li>
           );
         })}
