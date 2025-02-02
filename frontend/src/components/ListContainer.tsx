@@ -7,6 +7,9 @@ import { init } from "../store/modules/todo";
 
 export default function ListContainer() {
   const dispatch = useDispatch();
+
+  console.log("API Server URL:", process.env.REACT_APP_API_SERVER);
+
   async function getTodos() {
     const todos = await axios.get(`${process.env.REACT_APP_API_SERVER}/todos`);
     console.log(todos.data);
